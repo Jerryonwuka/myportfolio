@@ -19,7 +19,7 @@ window.SITE = {
   photos: { hero: 'assets/img/me/portrait.webp', stage: 'assets/img/me/thinking.webp', about: 'assets/img/me/smile.webp', casual: 'assets/img/me/casual.webp' },
   brands: ['Boredroom', 'Damov', 'Farmerz', 'BrandPilot', 'GoDark', 'Aziki Medical', 'Fabro', 'Motionbox Studios', 'Rooted Africa', 'Tyrian Group', 'Chop Chop', 'Orah Energies', 'XSITE Capital'],
   stats: [
-    { value: 5, suffix: '+', label: 'Years building brands, products and systems' },
+    { value: 7, suffix: '+', label: 'Years building brands, products and systems' },
     { value: 100, suffix: '+', label: 'Brands collaborated with' },
     { value: 4, suffix: '', label: 'Software systems shipped end to end' },
     { value: 1, suffix: '', label: 'Competition-winning brand film' }

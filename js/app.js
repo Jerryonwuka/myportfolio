@@ -711,7 +711,7 @@
     <section class="about-intro">
       <div>
         <p data-reveal="words">I'm a product designer and systems builder working at the point where <em class="serif lime">business</em> meets <em class="serif lime">innovation.</em></p>
-        <p data-reveal="words">For over five years I've collaborated with more than 100 brands, from early-stage founders to established companies, turning ideas into things that work and make money.</p>
+        <p data-reveal="words">For over seven years I've collaborated with more than 100 brands, from early-stage founders to established companies, turning ideas into things that work and make money.</p>
         <p class="small" data-reveal="fade">My work starts with the business: who pays, why, and what is in the way. Then I design and build the whole system around it. That means the brand identity, the website that sells it, the dashboards and apps that run it, and the motion and stories that launch it. I've shipped transport operating systems, land-leasing marketplaces, AI-powered SaaS and team-management platforms, built identities for agriculture, energy, food and advisory brands, and won a creative competition with a 3D brand film.</p>
         <p class="small" data-reveal="fade">Today I'm the Brand Designer at XSITE Capital Investment, and I build my own products: Boredroom, Farmerz and BrandPilot. I'm a Google-certified UX designer, studying Business Administration at the National Open University of Nigeria, based in ${S.location} and working with teams everywhere.</p>
         <div class="footer__actions" style="justify-content:flex-start" data-reveal="fade">
