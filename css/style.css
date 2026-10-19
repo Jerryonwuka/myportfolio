@@ -763,7 +763,7 @@ body.hdr-hidden .filters { top: 0; }
 .rates .dim { font-size: 15px; }
 .rates__price { font-weight: 800; font-stretch: 75%; font-size: clamp(22px, 2.2vw, 34px); white-space: nowrap; text-align: right; }
 .rates__price .mono { font-size: 10px; margin: 0 4px; }
-.rates__note { margin-top: 18px; }
+.rates__note { margin-top: 18px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; line-height: 1.6; }
 @media (max-width: 760px) { .rates li { grid-template-columns: 1fr auto; } .rates li > :first-child { display: none; } .rates .dim { grid-column: 1 / -1; grid-row: 2; } }
 
 /* ---------- Project form ---------- */
