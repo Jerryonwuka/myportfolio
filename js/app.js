@@ -12,6 +12,7 @@
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const isMobile = () => innerWidth < 900;
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
 
   /* ---------- helpers ---------- */
   const img = (g, i = 0) => M[g] && M[g][i] ? `assets/img/${g}/${M[g][i][0]}` : '';
@@ -136,7 +137,7 @@
   const clock = $('#clock');
   const tick = () => { clock.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: S.timezone }).format(new Date()); };
   tick(); setInterval(tick, 1000);
-  $('#menuSocials').innerHTML = S.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.label} ↗</a>`).join(' &nbsp; ');
+  $('#menuSocials').innerHTML = S.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.label} ↗︎</a>`).join(' &nbsp; ');
   $('#menuEmail').textContent = S.email; $('#menuEmail').href = 'mailto:' + S.email; $('#menuPhone').textContent = S.phone;
 
   /* =========================================================
@@ -343,7 +344,7 @@
         <h2 class="display" data-reveal="chars">Let's build <span class="serif">it</span></h2>
         <a class="footer__mail" href="mailto:${S.email}" data-cursor="link" data-reveal="fade">${S.email}</a>
         <div class="footer__actions" data-reveal="fade">
-          <a class="btn btn--accent btn--lg" href="mailto:${S.email}?subject=Project%20enquiry" data-magnetic><span>Start a project</span><i>↗</i></a>
+          <a class="btn btn--accent btn--lg" href="mailto:${S.email}?subject=Project%20enquiry" data-magnetic><span>Start a project</span><i>↗︎</i></a>
           <a class="btn btn--ghost btn--lg" href="tel:${S.phone.replace(/\s/g, '')}" data-magnetic><span>${S.phone}</span></a>
           <a class="btn btn--ghost btn--lg" href="${S.cv}" target="_blank" rel="noopener" data-magnetic><span>Download CV</span><i>↓</i></a>
         </div>
@@ -389,7 +390,7 @@
         const imgs = [thumb(p), ...partImgs(p)];
         return `
       <article class="venture${p.lead ? ' venture--lead' : ''}">
-        <a class="venture__media" href="#/work/${p.slug}" data-cursor="view" data-label="MOVE ↔" data-scrub-imgs='${JSON.stringify(imgs)}' data-reveal="clip">
+        <a class="venture__media" href="#/work/${p.slug}" data-cursor="view" data-label="MOVE ↔︎" data-scrub-imgs='${JSON.stringify(imgs)}' data-reveal="clip">
           <img src="${imgs[0]}" alt="${esc(p.title)} product screens" loading="lazy">
           ${p.lead ? '<span class="badge mono">★ Lead project</span>' : ''}
           <span class="venture__count mono"><b>01</b> / ${pad(imgs.length)}</span>
@@ -400,8 +401,8 @@
           <h3 class="display" data-reveal="chars">${p.title}</h3>
           <p class="venture__sub serif">${p.sub}</p>
           <p class="dim">${p.about}</p>
-          <div class="tags">${p.parts.map(([l, s]) => `<a class="tag tag--link" href="#/work/${s}" data-cursor="link">${l} ↗</a>`).join('')}</div>
-          <div class="venture__cta"><a class="btn btn--accent" href="#/work/${p.slug}" data-magnetic><span>Read the case study</span><i>→</i></a>${p.url ? `<a class="btn btn--ghost" href="${p.url}" target="_blank" rel="noopener" data-magnetic><span>Live</span><i>↗</i></a>` : ''}</div>
+          <div class="tags">${p.parts.map(([l, s]) => `<a class="tag tag--link" href="#/work/${s}" data-cursor="link">${l} ↗︎</a>`).join('')}</div>
+          <div class="venture__cta"><a class="btn btn--accent" href="#/work/${p.slug}" data-magnetic><span>Read the case study</span><i>→</i></a>${p.url ? `<a class="btn btn--ghost" href="${p.url}" target="_blank" rel="noopener" data-magnetic><span>Live</span><i>↗︎</i></a>` : ''}</div>
         </div>
       </article>`; }).join('')}
     </section>`;
@@ -657,7 +658,7 @@
         <div data-reveal="fade"><dt>Role</dt><dd>${p.role}</dd></div>
         <div data-reveal="fade"><dt>Services</dt><dd>${p.services.join(', ')}</dd></div>
         <div data-reveal="fade"><dt>Year</dt><dd>${p.year}${p.award ? ` · <span class="lime">★ ${p.award}</span>` : ''}</dd></div>
-        <div data-reveal="fade">${p.url ? `<a class="btn btn--accent" href="${p.url}" target="_blank" rel="noopener" data-magnetic><span>Visit live</span><i>↗</i></a>` : ''}</div>
+        <div data-reveal="fade">${p.url ? `<a class="btn btn--accent" href="${p.url}" target="_blank" rel="noopener" data-magnetic><span>Visit live</span><i>↗︎</i></a>` : ''}</div>
       </dl>
     </section>
 
@@ -665,7 +666,7 @@
     <div class="cover cover--video" data-video>
       <video src="${p.video}" poster="${p.poster || thumb(p)}" preload="none" playsinline></video>
       <div class="cover__big" aria-hidden="true"><span>Play</span><span>This</span></div>
-      <button class="play" data-cursor="play" data-label="PLAY" aria-label="Play ${esc(p.title)} film">PLAY ▶</button>
+      <button class="play" data-cursor="play" data-label="PLAY" aria-label="Play ${esc(p.title)} film">PLAY ▶︎</button>
     </div>` : `
     <div class="cover" data-cover><img src="${thumb(p)}" alt="${esc(p.title)} cover" data-cover-img></div>`}
 
@@ -719,7 +720,7 @@
         <p class="small" data-reveal="fade">Right now I'm the Brand Designer at XSITE Capital Investment and a Google-certified UX designer, based in ${S.location} and working with teams anywhere.</p>
         <div class="footer__actions" style="justify-content:flex-start" data-reveal="fade">
           <a class="btn btn--accent btn--lg" href="${S.cv}" target="_blank" rel="noopener" data-magnetic><span>Download CV</span><i>↓</i></a>
-          <a class="btn btn--ghost btn--lg" href="#/contact" data-magnetic><span>Say hi</span><i>↗</i></a>
+          <a class="btn btn--ghost btn--lg" href="#/contact" data-magnetic><span>Say hi</span><i>↗︎</i></a>
         </div>
       </div>
       <aside class="about-card" data-reveal="clip">
@@ -815,7 +816,7 @@
         <div data-reveal="fade"><span class="mono">Phone / WhatsApp</span><a href="tel:${S.phone.replace(/\s/g, '')}" data-cursor="link">${S.phone}</a></div>
         <div data-reveal="fade"><span class="mono">CV</span><a href="${S.cv}" target="_blank" rel="noopener" data-cursor="link">Download PDF ↓</a></div>
         <div data-reveal="fade"><span class="mono">Pricing</span><a href="#/pricing" data-cursor="link">See packages →</a></div>
-        ${S.socials.map(s => `<div data-reveal="fade"><span class="mono">${s.label}</span><a href="${s.url}" target="_blank" rel="noopener" data-cursor="link">${s.handle} ↗</a></div>`).join('')}
+        ${S.socials.map(s => `<div data-reveal="fade"><span class="mono">${s.label}</span><a href="${s.url}" target="_blank" rel="noopener" data-cursor="link">${s.handle} ↗︎</a></div>`).join('')}
       </div>
     </section>
     ${projectForm('01')}
@@ -848,7 +849,7 @@
             <option>As soon as possible</option><option selected>Within a month</option><option>1 to 3 months</option><option>Flexible</option></select></label>
           <label class="field field--full"><span class="mono">Tell me about the project *</span><textarea name="message" rows="5" required placeholder="What are you building, who is it for, and what does success look like?"></textarea></label>
           <div class="pform__foot field--full">
-            <button class="btn btn--accent btn--lg" type="submit" data-magnetic><span data-btn-label>Send it</span><i>↗</i></button>
+            <button class="btn btn--accent btn--lg" type="submit" data-magnetic><span data-btn-label>Send it</span><i>↗︎</i></button>
             <p class="pform__status mono" data-form-status role="status" aria-live="polite"></p>
           </div>
         </form>
@@ -872,7 +873,7 @@
           <div class="pkg__price"><span class="mono">from</span><b>$<span data-count="${usd(k.price)}">${usd(k.price)}</span></b></div>
           <p class="pkg__blurb">${k.blurb}</p>
           <ul class="pkg__list">${k.items.map(t => `<li>${t}</li>`).join('')}</ul>
-          <p class="pkg__time mono">⏱ ${k.time}</p>
+          <p class="pkg__time mono">Timeline · ${k.time}</p>
           <a class="btn ${k.featured ? 'btn--ink' : 'btn--accent'} btn--lg pkg__cta" href="#start" data-pkg="${k.name} (from $${usd(k.price)})" data-magnetic><span>Start with ${k.name}</span><i>→</i></a>
         </article>`).join('')}
         <article class="pkg pkg--custom" data-pkg-card>
@@ -880,7 +881,7 @@
           <h2 class="pkg__name display">Custom</h2>
           <div class="pkg__price"><b class="serif">Let's talk</b></div>
           <p class="pkg__blurb">Bigger builds, retainers, ongoing design support or something that doesn't fit a box. Send me an email and we'll scope it together.</p>
-          <a class="btn btn--ghost btn--lg pkg__cta" href="mailto:${S.email}?subject=Custom%20project%20enquiry" data-magnetic><span>Send an email</span><i>↗</i></a>
+          <a class="btn btn--ghost btn--lg pkg__cta" href="mailto:${S.email}?subject=Custom%20project%20enquiry" data-magnetic><span>Send an email</span><i>↗︎</i></a>
         </article>
       </div>
     </section>
@@ -1010,7 +1011,9 @@
 
       /* process cards shrink as next stacks */
       const proc = $('.process', app);
-      if (proc) {
+      if (proc && innerWidth < 900) {
+        proc.classList.add('process--static');
+      } else if (proc) {
         const pcs = $$('.pcard', proc);
         gsap.set(pcs.slice(1), { yPercent: 115 });
         const tl = gsap.timeline({ scrollTrigger: { trigger: proc, start: () => `top ${$('#header').offsetHeight + 40}px`, end: () => '+=' + innerHeight * pcs.length * .8, pin: true, scrub: 1, invalidateOnRefresh: true, refreshPriority: 1 } });
@@ -1142,7 +1145,7 @@
 
       /* pricing cards */
       const pk = $$('[data-pkg-card]', app);
-      if (pk.length) gsap.from(pk, { y: 120, rotationX: -25, opacity: 0, transformOrigin: '50% 100%', duration: 1.3, ease: 'expo.out', stagger: .12, scrollTrigger: { trigger: '.pkgs', start: 'top 85%' } });
+      if (pk.length) gsap.from(pk, { y: 80, opacity: 0, duration: 1.1, ease: 'expo.out', stagger: .1, clearProps: 'transform', scrollTrigger: { trigger: '.pkgs', start: 'top 85%' } });
 
       /* toolkit chips + app tiles */
       $$('.stack__items, .tools', app).forEach(group => {

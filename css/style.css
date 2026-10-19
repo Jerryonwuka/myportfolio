@@ -48,7 +48,7 @@ html { transition: background-color .5s; }
 body { transition: background-color .5s, color .5s; }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; font-variant-emoji: text; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: hidden; }
@@ -730,7 +730,7 @@ body.hdr-hidden .filters { top: 0; }
 /* ---------- Pricing ---------- */
 .odo__sep { display: inline-block; }
 .btn--ink { background: var(--accent-ink); color: var(--accent); }
-.pkgs { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 1.4vw, 20px); perspective: 1200px; align-items: stretch; }
+.pkgs { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 1.4vw, 20px); align-items: stretch; }
 .pkg { position: relative; display: flex; flex-direction: column; gap: 14px; padding: clamp(20px, 2vw, 30px); border: 1px solid var(--line); border-radius: 20px; background: var(--bg-2); transition: transform .6s var(--ease-out), border-color .4s; }
 .pkg:hover { transform: translateY(-8px); border-color: var(--line-2); }
 .pkg__top { display: flex; justify-content: space-between; gap: 8px; color: var(--fg-dim); }
@@ -784,3 +784,8 @@ body.hdr-hidden .filters { top: 0; }
 .pform__status { margin: 0; color: var(--fg-dim); max-width: 46ch; }
 @media (max-width: 860px) { .pform-grid { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .pform { grid-template-columns: 1fr; } }
+
+/* process on phones: simple stacked list, no pinning */
+.process--static { height: auto; min-height: 0; display: grid; gap: 14px; }
+.process--static .pcard { position: relative; inset: auto; transform: none !important; }
+.process--static .pcard__shade { display: none; }
