@@ -145,7 +145,7 @@ window.PROJECTS = [
       ['The system', 'Farmer and landowner workspaces, AI matching on crops, soil, budget and distance, digital leases and an admin ledger.'],
       ['The brand', 'An orange, green and chrome identity with the line "Make room for growth", rolled out from field kits to roadside billboards.']
     ],
-    outcome: 'A two-sided marketplace, a brand and a website that make leasing land feel like progress, built end to end as my own venture.',
+    outcome: 'A two-sided marketplace, a brand and a website that make leasing land feel like progress, built end to end as a venture I co-founded.',
     highlights: ['Co-founder built', 'Two-sided marketplace', 'AI land matching', 'Full brand'],
     parts: [['Software system', 'farmerz-system'], ['Website', 'farmerz-website'], ['Brand identity', 'farmerz-brand']]
   },
