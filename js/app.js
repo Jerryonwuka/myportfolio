@@ -92,8 +92,9 @@
   /* odometer: rolling digit columns */
   function odometer(el) {
     const v = String(el.dataset.count);
-    el.innerHTML = [...v].map(d => `<span class="odo"><span class="odo__col">${'0123456789'.repeat(2).split('').map(n => `<span>${n}</span>`).join('')}</span></span>`).join('');
-    return $$('.odo__col', el).map((c, i) => ({ c, d: +v[i] }));
+    el.innerHTML = [...v].map(d => /\d/.test(d) ? `<span class="odo"><span class="odo__col">${'0123456789'.repeat(2).split('').map(n => `<span>${n}</span>`).join('')}</span></span>` : `<span class="odo__sep">${d}</span>`).join('');
+    const digits = [...v].filter(d => /\d/.test(d));
+    return $$('.odo__col', el).map((c, i) => ({ c, d: +digits[i] }));
   }
   /* scramble text in, for small numeric labels */
   function scramble(el, dur = .8) {
@@ -348,7 +349,7 @@
         </div>
       </div>
       <div class="footer__grid mono">
-        <div><span class="h">Navigate</span><a href="#/">Home</a><a href="#/work">Work</a><a href="#/about">About</a><a href="#/contact">Contact</a></div>
+        <div><span class="h">Navigate</span><a href="#/">Home</a><a href="#/work">Work</a><a href="#/about">About</a><a href="#/pricing">Pricing</a><a href="#/contact">Contact</a></div>
         <div><span class="h">Work</span>${C.map(c => `<a href="#/work?c=${c.id}">${c.label}</a>`).join('')}</div>
         <div><span class="h">Contact</span><a href="mailto:${S.email}">${S.email}</a><a href="tel:${S.phone.replace(/\s/g, '')}">${S.phone}</a></div>
         <div><span class="h">Follow</span>${S.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.label} ${s.handle}</a>`).join('')}</div>
@@ -813,11 +814,87 @@
         <div data-reveal="fade"><span class="mono">Email</span><a href="mailto:${S.email}?subject=Project%20enquiry" data-cursor="link">${S.email}</a></div>
         <div data-reveal="fade"><span class="mono">Phone / WhatsApp</span><a href="tel:${S.phone.replace(/\s/g, '')}" data-cursor="link">${S.phone}</a></div>
         <div data-reveal="fade"><span class="mono">CV</span><a href="${S.cv}" target="_blank" rel="noopener" data-cursor="link">Download PDF ↓</a></div>
+        <div data-reveal="fade"><span class="mono">Pricing</span><a href="#/pricing" data-cursor="link">See packages →</a></div>
         ${S.socials.map(s => `<div data-reveal="fade"><span class="mono">${s.label}</span><a href="${s.url}" target="_blank" rel="noopener" data-cursor="link">${s.handle} ↗</a></div>`).join('')}
       </div>
     </section>
+    ${projectForm('01')}
     ${marquee(['Software Systems', '<span class="serif">Websites</span>', 'Branding', '<span class="serif">Motion</span>', 'UI/UX'], 'marquee--accent')}
     <footer class="footer" style="padding-top:40px"><div class="footer__name" data-footer-name aria-hidden="true">Jerry Onwuka</div></footer>`;
+
+  const usd = n => n.toLocaleString('en-US');
+
+  /* project enquiry form: sends to my inbox */
+  const projectForm = (num = '03') => `
+    <section class="section pform-wrap" id="start">
+      <div class="label-row mono"><span><span class="num">(${num})</span> Start a project</span><span>Straight to my inbox</span></div>
+      <div class="pform-grid">
+        <div>
+          <h2 class="display h2">Let's <span class="serif lime">talk</span></h2>
+          <p class="lead dim">Tell me about the idea, the business behind it and where you want it to go. I'll get back to you with next steps and a quote.</p>
+          <p class="mono dim pform-alt">Prefer email? <a class="lime" href="mailto:${S.email}?subject=Project%20enquiry">${S.email}</a></p>
+        </div>
+        <form class="pform" data-form novalidate>
+          <input type="text" name="_honey" class="pform__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="field"><span class="mono">Your name *</span><input name="name" required autocomplete="name" placeholder="Ada Obi"></label>
+          <label class="field"><span class="mono">Email *</span><input name="email" type="email" required autocomplete="email" placeholder="ada@company.com"></label>
+          <label class="field"><span class="mono">Company or brand</span><input name="company" autocomplete="organization" placeholder="Optional"></label>
+          <label class="field"><span class="mono">Package</span><select name="package" data-pkg-select>
+            ${S.packages.map(k => `<option value="${k.name} (from $${usd(k.price)})">${k.name}, from $${usd(k.price)}</option>`).join('')}
+            <option value="Custom">Custom</option><option value="Not sure yet" selected>Not sure yet</option></select></label>
+          <label class="field"><span class="mono">Budget</span><select name="budget">
+            <option>Under $700</option><option>$700 to $1,500</option><option selected>$1,500 to $2,500</option><option>$2,500 to $5,000</option><option>$5,000+</option></select></label>
+          <label class="field"><span class="mono">Timeline</span><select name="timeline">
+            <option>As soon as possible</option><option selected>Within a month</option><option>1 to 3 months</option><option>Flexible</option></select></label>
+          <label class="field field--full"><span class="mono">Tell me about the project *</span><textarea name="message" rows="5" required placeholder="What are you building, who is it for, and what does success look like?"></textarea></label>
+          <div class="pform__foot field--full">
+            <button class="btn btn--accent btn--lg" type="submit" data-magnetic><span data-btn-label>Send it</span><i>↗</i></button>
+            <p class="pform__status mono" data-form-status role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>`;
+
+  const Pricing = () => `
+    <section class="page-hero">
+      <p class="mono dim" data-reveal="fade">[ Rate card ]</p>
+      <h1 class="display" data-reveal="chars">Pricing</h1>
+      <div class="page-hero__sub"><p data-reveal="words">Clear starting points in USD. Every project gets a proper quote once I understand the business behind it.</p></div>
+    </section>
+
+    <section class="section" style="padding-top:clamp(24px,4vw,48px)">
+      <div class="label-row mono"><span><span class="num">(01)</span> Packages</span><span>Starting prices</span></div>
+      <div class="pkgs">
+        ${S.packages.map((k, i) => `
+        <article class="pkg${k.featured ? ' pkg--featured' : ''}" data-pkg-card>
+          <div class="pkg__top"><span class="mono">${pad(i + 1)} · ${k.tag}</span>${k.featured ? '<span class="pkg__star mono">★ Popular</span>' : ''}</div>
+          <h2 class="pkg__name display">${k.name}</h2>
+          <div class="pkg__price"><span class="mono">from</span><b>$<span data-count="${usd(k.price)}">${usd(k.price)}</span></b></div>
+          <p class="pkg__blurb">${k.blurb}</p>
+          <ul class="pkg__list">${k.items.map(t => `<li>${t}</li>`).join('')}</ul>
+          <p class="pkg__time mono">⏱ ${k.time}</p>
+          <a class="btn ${k.featured ? 'btn--ink' : 'btn--accent'} btn--lg pkg__cta" href="#start" data-pkg="${k.name} (from $${usd(k.price)})" data-magnetic><span>Start with ${k.name}</span><i>→</i></a>
+        </article>`).join('')}
+        <article class="pkg pkg--custom" data-pkg-card>
+          <div class="pkg__top"><span class="mono">04 · Anything else</span></div>
+          <h2 class="pkg__name display">Custom</h2>
+          <div class="pkg__price"><b class="serif">Let's talk</b></div>
+          <p class="pkg__blurb">Bigger builds, retainers, ongoing design support or something that doesn't fit a box. Send me an email and we'll scope it together.</p>
+          <a class="btn btn--ghost btn--lg pkg__cta" href="mailto:${S.email}?subject=Custom%20project%20enquiry" data-magnetic><span>Send an email</span><i>↗</i></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="label-row mono"><span><span class="num">(02)</span> Rate card</span><span>Single services, from</span></div>
+      <ul class="rates">
+        ${S.rateCard.map(([n, dsc, p, unit], i) => `<li><span class="mono lime">${pad(i + 1)}</span><b>${n}</b><span class="dim">${dsc}</span><span class="rates__price"><span class="mono dim">from</span> $${usd(p)}<span class="mono dim">${unit}</span></span></li>`).join('')}
+      </ul>
+      <p class="mono dim rates__note">Prices are starting points. Final quotes depend on scope, timeline and how much we build together.</p>
+    </section>
+
+    ${projectForm('03')}
+    ${footer()}`;
 
   const NotFound = () => `<section class="contact"><div><p class="mono dim">[ 404 ]</p><h1 class="display">Lost <span class="serif lime">signal</span></h1><p class="lead">This page doesn't exist. <a href="#/" class="lime">Back home →</a></p></div></section>`;
 
@@ -869,7 +946,7 @@
       $$('.label-row .num, .fcard__num, .venture__info > .mono, .cert .mono.lime', app).forEach(el => ScrollTrigger.create({ trigger: el, start: 'top 95%', once: true, onEnter: () => scramble(el) }));
 
       /* every other piece of text gets a scroll-in */
-      const skip = '[data-reveal],[data-scrub-words],[data-hero],[data-stage],.marquee,[data-footer-name],[data-hs-track],.process,.reel,.venture__media,.browser,.phone,.stills,.masonry,.footer__actions,.filters,.tools,.stack__items';
+      const skip = '[data-reveal],[data-scrub-words],[data-hero],[data-stage],.marquee,[data-footer-name],[data-hs-track],.process,.reel,.venture__media,.browser,.phone,.stills,.masonry,.footer__actions,.filters,.tools,.stack__items,.pkgs,.pform';
       let auto = $$('p, h2, h3, h4, li, .label-row, .tags, .wcard__meta, .fcard__meta, .stat, .mono', app).filter(el => !el.closest(skip) && !el.querySelector('[data-reveal],[data-scrub-words]'));
       auto = auto.filter(el => !auto.some(o => o !== el && o.contains(el)));
       gsap.set(auto, { opacity: 0, y: 36 });
@@ -1063,6 +1140,10 @@
         gsap.from(card, { y: 80, rotation: gsap.utils.random(-6, 6), opacity: 0, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: card, start: 'top 92%' } });
       });
 
+      /* pricing cards */
+      const pk = $$('[data-pkg-card]', app);
+      if (pk.length) gsap.from(pk, { y: 120, rotationX: -25, opacity: 0, transformOrigin: '50% 100%', duration: 1.3, ease: 'expo.out', stagger: .12, scrollTrigger: { trigger: '.pkgs', start: 'top 85%' } });
+
       /* toolkit chips + app tiles */
       $$('.stack__items, .tools', app).forEach(group => {
         gsap.from($$('[data-chip]', group), { opacity: 0, y: 24, scale: .9, duration: .8, ease: 'back.out(1.6)', stagger: .05, scrollTrigger: { trigger: group, start: 'top 90%' } });
@@ -1099,6 +1180,42 @@
     }, app);
   }
 
+  /* project form: package buttons + submit to inbox */
+  function bindForms(q) {
+    const form = $('[data-form]', app); if (!form) return;
+    const sel = $('[data-pkg-select]', form), status = $('[data-form-status]', form), label = $('[data-btn-label]', form);
+    const goToForm = () => { const t = $('#start', app); lenis ? lenis.scrollTo(t, { offset: -40 }) : t.scrollIntoView({ behavior: 'smooth' }); };
+    $$('[data-pkg]', app).forEach(b => b.addEventListener('click', e => {
+      e.preventDefault(); sel.value = b.dataset.pkg; goToForm();
+      gsap.fromTo(sel.closest('.field'), { backgroundColor: 'rgba(204,255,0,.35)' }, { backgroundColor: 'rgba(204,255,0,0)', duration: 1.6, delay: .8 });
+    }));
+    if (q.get('package')) { const m = S.packages.find(k => k.id === q.get('package')); if (m) sel.value = `${m.name} (from $${usd(m.price)})`; }
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (form._honey.value) return;
+      const bad = $$('[required]', form).filter(f => !f.value.trim() || (f.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value)));
+      $$('.field', form).forEach(f => f.classList.remove('is-bad'));
+      if (bad.length) { bad.forEach(f => f.closest('.field').classList.add('is-bad')); status.textContent = 'Please fill in the highlighted fields.'; gsap.fromTo(form, { x: -8 }, { x: 0, duration: .5, ease: 'elastic.out(1,.3)' }); return; }
+      const data = Object.fromEntries(new FormData(form));
+      delete data._honey;
+      label.textContent = 'Sending…'; status.textContent = '';
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${S.email}`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ ...data, _subject: `New project enquiry from ${data.name}`, _replyto: data.email, _template: 'table' })
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || out.success === 'false' || out.success === false) throw new Error(out.message || 'send failed');
+        label.textContent = 'Sent ✓'; status.textContent = `Thanks ${data.name.split(' ')[0]}, it's in my inbox. I'll be in touch soon.`;
+        form.reset(); gsap.fromTo(form, { scale: .98 }, { scale: 1, duration: .8, ease: 'elastic.out(1,.4)' });
+      } catch (err) {
+        label.textContent = 'Send it';
+        const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n');
+        status.innerHTML = `Couldn't send from the page. <a class="lime" href="mailto:${S.email}?subject=${encodeURIComponent('Project enquiry from ' + data.name)}&body=${encodeURIComponent(body)}">Send it by email instead →</a>`;
+      }
+    });
+  }
+
   /* work-page view toggle */
   function bindWork(q) {
     $$('[data-view]', app).forEach(b => b.addEventListener('click', () => {
@@ -1115,7 +1232,7 @@
     const [path, qs] = h.split('?');
     return { path, q: new URLSearchParams(qs || '') };
   };
-  const titles = { '/': 'Business × Innovations', '/work': 'Work', '/about': 'About', '/contact': 'Contact' };
+  const titles = { '/': 'Business × Innovations', '/work': 'Work', '/about': 'About', '/contact': 'Contact', '/pricing': 'Pricing' };
   let busy = false, first = true, lastPath = null;
 
   function render() {
@@ -1126,6 +1243,7 @@
     else if (path.startsWith('/work/')) { const p = bySlug(path.slice(6)); html = Case(path.slice(6)); title = p ? `${p.title}, ${catOf(p.cat).label}` : 'Not found'; }
     else if (path === '/about') { html = About(); title = 'About'; }
     else if (path === '/contact') { html = Contact(); title = 'Contact'; }
+    else if (path === '/pricing') { html = Pricing(); title = 'Pricing'; }
     else { html = NotFound(); title = 'Not found'; }
     document.title = `${title} | Jerry Onwuka`;
     ScrollTrigger.getAll().forEach(t => t.kill());
@@ -1135,6 +1253,7 @@
     scrollTop();
     bindPreview(app); bindMagnetic(app);
     if (path === '/work') bindWork(q);
+    bindForms(q);
     header.classList.remove('is-hidden'); document.body.classList.remove('hdr-hidden');
     pvEl = null; gsap.to(previewInner, { scale: 0, duration: .2, overwrite: 'auto' });
     requestAnimationFrame(() => { animatePage(first); ScrollTrigger.refresh(); });

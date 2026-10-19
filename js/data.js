@@ -82,6 +82,38 @@ window.SITE = {
     { title: 'Introduction to Design Systems', issuer: 'Figma', year: '', img: 'assets/img/certs/design-systems.webp' },
     { title: 'No-Code Web Design with Elementor & WordPress', issuer: 'Domestika', year: '2024', img: 'assets/img/certs/domestika.webp' }
   ],
+  /* Pricing page. All prices in USD and editable here. */
+  packages: [
+    {
+      id: 'launch', name: 'Launch', price: 700, tag: 'For new ideas',
+      blurb: 'Get a new idea in front of customers fast, with a sharp look and a page that sells.',
+      items: ['Logo and mini brand kit (colours, type, usage)', 'One high-converting landing page, designed and built', 'Mobile-first, fast and SEO-ready', 'Contact or waitlist form connected', '2 rounds of revisions'],
+      time: '2 to 3 weeks'
+    },
+    {
+      id: 'grow', name: 'Grow', price: 1500, tag: 'Most popular', featured: true,
+      blurb: 'A complete brand and website for a business that is ready to grow and be taken seriously.',
+      items: ['Full brand identity and guidelines', 'Multi-page website (up to 6 pages) with CMS', 'Copy direction and conversion-focused layouts', 'Animated logo or a short motion piece', 'Analytics and SEO setup', '3 rounds of revisions'],
+      time: '3 to 5 weeks'
+    },
+    {
+      id: 'scale', name: 'Scale', price: 2500, tag: 'For products & systems',
+      blurb: 'Turn an idea into a working product: the system, the brand and the launch, end to end.',
+      items: ['Product strategy and user flows', 'UI/UX for a web app, dashboard or MVP', 'Design system your team can reuse', 'Marketing website for launch', 'Launch film or product animation', 'Priority support through launch'],
+      time: '6 to 8 weeks'
+    }
+  ],
+  rateCard: [
+    ['Brand identity', 'Logo, colours, type and a short guide', 500, ''],
+    ['Landing page', 'One page, designed and built', 600, ''],
+    ['Multi-page website', 'Up to 6 pages with CMS', 1200, ''],
+    ['UI/UX design', 'Web or mobile app screens', 80, '/ screen'],
+    ['Dashboard or web app MVP', 'Design and build of a working system', 2500, ''],
+    ['Motion graphics', 'Logo animation or social piece, up to 30s', 300, ''],
+    ['Launch or explainer film', '2D or 3D, up to 90s', 800, ''],
+    ['Strategy session', '90 minutes: idea, model and next steps', 100, '']
+  ],
+
   /* Edit these to match exactly what you use */
   techStack: [
     { group: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'GSAP'] },
