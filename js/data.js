@@ -135,9 +135,9 @@ window.PROJECTS = [
     slug: 'farmerz', cat: 'personal', images: 'farmerz-system',
     title: 'Farmerz', sub: 'Turning idle land into monthly income',
     year: '2026', client: 'Personal project', industry: 'Agritech · Marketplace', accent: '#F26B1D',
-    role: 'Founder · strategy, design & build', url: 'https://www.farmerz.cc/',
+    role: 'Co-founder · strategy, design & build', url: 'https://www.farmerz.cc/',
     services: ['Business model', 'Brand', 'Marketplace', 'Website'],
-    about: 'Farmerz is my own agritech marketplace that connects farmers with idle farmland across Nigeria, so they can lease instead of buy.',
+    about: 'Farmerz is an agritech marketplace I co-founded that connects farmers with idle farmland across Nigeria, so they can lease instead of buy.',
     challenge: 'Farmland across Nigeria sits unused while farmers who want to grow cannot afford to buy land. Finding, trusting and paying for a plot is slow and informal.',
     approach: [
       ['The idea', 'Make leasing land as easy as renting an apartment: browse, match, sign and pay in one place.'],
@@ -146,7 +146,7 @@ window.PROJECTS = [
       ['The brand', 'An orange, green and chrome identity with the line "Make room for growth", rolled out from field kits to roadside billboards.']
     ],
     outcome: 'A two-sided marketplace, a brand and a website that make leasing land feel like progress, built end to end as my own venture.',
-    highlights: ['Founder-built', 'Two-sided marketplace', 'AI land matching', 'Full brand'],
+    highlights: ['Co-founder built', 'Two-sided marketplace', 'AI land matching', 'Full brand'],
     parts: [['Software system', 'farmerz-system'], ['Website', 'farmerz-website'], ['Brand identity', 'farmerz-brand']]
   },
   {
