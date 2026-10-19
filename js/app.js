@@ -379,7 +379,7 @@
   /* ---------- new shared sections ---------- */
   const venturesSection = (num = '02') => `
     <section class="section ventures">
-      <div class="label-row mono"><span><span class="num">(${num})</span> Personal projects</span><span>Products I founded, designed &amp; built</span></div>
+      <div class="label-row mono"><span><span class="num">(${num})</span> Personal projects</span><span>Products I co-founded, designed &amp; built</span></div>
       <div class="ventures__head">
         <h2 class="display h2" data-reveal="chars">Personal <span class="serif lime">projects</span></h2>
         <p class="lead dim" data-reveal="words">My own ventures. Same playbook I use for clients: find the money, then build the brand, the website and the system myself.</p>
@@ -479,7 +479,7 @@
         <path d="M70 334 C 300 294 560 284 870 250"/>
       </svg>
       <p class="stage__line display" data-stage-line>Every system ships <span class="serif">signed.</span></p>
-      <p class="stage__by mono">— Jerry Onwuka<br>Founder &amp; systems builder</p>
+      <p class="stage__by mono">— Jerry Onwuka<br>Co-founder &amp; systems builder</p>
     </section>
 
     <section class="section manifesto" data-manifesto>
@@ -732,23 +732,23 @@
     </section>
 
     <section class="section founder">
-      <div class="label-row mono"><span><span class="num">(01)</span> Founder mode</span><span>Boredroom</span></div>
+      <div class="label-row mono"><span><span class="num">(01)</span> Co-founder mode</span><span>Boredroom</span></div>
       <div class="founder__grid">
         <div>
           <h2 class="display h2">Living the <span class="serif lime">dream</span></h2>
-          <p class="lead">I'm the founder of Boredroom, remote team software where everyone gets their own AI assistant. Building it is literally the thing I used to daydream about as a kid: an idea, a team, a real product people pay for.</p>
+          <p class="lead">I'm the co-founder of Boredroom, remote team software where everyone gets their own AI assistant. Building it is literally the thing I used to daydream about as a kid: an idea, a team, a real product people pay for.</p>
           <p class="dim founder__more">And honestly? This is just the start. There are a whole lot more products and systems I want to build, and I'm building them.</p>
           <a class="btn btn--accent btn--lg" href="#/work/boredroom" data-magnetic><span>See how I built Boredroom</span><i>→</i></a>
         </div>
-        <a class="founder__media" href="#/work/boredroom" data-cursor="view" data-label="OPEN" data-reveal="clip">
-          <img src="${thumb(bySlug('boredroom'))}" alt="Boredroom website" loading="lazy">
+        <div class="founder__media">
+          <a class="founder__link" href="#/work/boredroom" data-cursor="view" data-label="OPEN" data-reveal="clip"><img src="${thumb(bySlug('boredroom'))}" alt="Boredroom website" loading="lazy"></a>
           <svg class="founder__badge" viewBox="0 0 120 120" aria-hidden="true" data-spin>
             <defs><path id="fb-circle" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
             <circle cx="60" cy="60" r="58" class="founder__badge-bg"/>
-            <text><textPath href="#fb-circle">FOUNDER • BOREDROOM • FOUNDER • BOREDROOM •</textPath></text>
+            <text><textPath href="#fb-circle" textLength="272" lengthAdjust="spacing">CO-FOUNDER • BOREDROOM • </textPath></text>
             <text x="60" y="68" text-anchor="middle" class="founder__badge-star">★</text>
           </svg>
-        </a>
+        </div>
       </div>
     </section>
 

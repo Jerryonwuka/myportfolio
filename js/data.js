@@ -117,9 +117,9 @@ window.PROJECTS = [
     slug: 'boredroom', cat: 'personal', images: 'boredroom-system', thumb: 'assets/img/boredroom-website/01.webp', lead: true,
     title: 'Boredroom', sub: 'Remote teams, without the chasing',
     year: '2026', client: 'Personal project', industry: 'SaaS · Future of work', accent: '#F27A1A',
-    role: 'Founder · strategy, design & build', url: 'https://www.boredroom.cc/',
+    role: 'Co-founder · strategy, design & build', url: 'https://www.boredroom.cc/',
     services: ['Business model', 'Product', 'Software system', 'Website', 'Launch film'],
-    about: 'Boredroom is my own SaaS product: remote team management software where every person gets an AI assistant, Brenda, who knows their day and answers "any update?" from their real work.',
+    about: 'Boredroom is a SaaS product I co-founded: remote team management software where every person gets an AI assistant, Brenda, who knows their day and answers "any update?" from their real work.',
     challenge: 'I kept seeing the same leak in every team I worked with. Leads spend hours a week chasing updates, and staff lose focus answering them. Time trackers record minutes but not context. I wanted to turn that wasted time into a product teams would pay for.',
     approach: [
       ['The idea', 'Give every person an assistant that already knows their work, so nobody has to ask "is it done yet?" again.'],
@@ -127,8 +127,8 @@ window.PROJECTS = [
       ['The system', 'An org dashboard, My Day for staff, Brenda the AI layer and a full internal Control Centre for subscriptions, payments, usage and marketing.'],
       ['The launch', 'A story-led marketing site with comparison and use-case pages, plus a 2D launch film that explains the product in 51 seconds.']
     ],
-    outcome: 'From a frustration to a launched, revenue-ready SaaS: brand, website, product, admin and launch film, all designed and built by me.',
-    highlights: ['Founder-built', 'AI assistant per person', 'Subscriptions & payments', 'Launch film'],
+    outcome: 'From a frustration to a launched, revenue-ready SaaS: brand, website, product, admin and launch film, all designed and built by me as co-founder.',
+    highlights: ['Co-founder built', 'AI assistant per person', 'Subscriptions & payments', 'Launch film'],
     parts: [['Software system', 'boredroom-system'], ['Website', 'boredroom-website'], ['Brand story film', 'boredroom-story'], ['Launch film', 'boredroom-film']]
   },
   {
