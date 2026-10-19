@@ -14,7 +14,8 @@ window.SITE = {
   timezone: 'Africa/Lagos',
   cv: 'assets/Jerry-Onwuka-CV.pdf',
   socials: [
-    // Add your real profile links here, e.g. { label: 'LinkedIn', url: 'https://linkedin.com/in/...' }
+    { label: 'X', handle: '@JeremiahDfirst', url: 'https://x.com/JeremiahDfirst' },
+    { label: 'Instagram', handle: '@jeremiahdfirst', url: 'https://www.instagram.com/jeremiahdfirst/' }
   ],
   photos: { hero: 'assets/img/me/portrait.webp', stage: 'assets/img/me/thinking.webp', about: 'assets/img/me/smile.webp', casual: 'assets/img/me/casual.webp' },
   brands: ['Boredroom', 'Damov', 'Farmerz', 'BrandPilot', 'GoDark', 'Aziki Medical', 'Fabro', 'Motionbox Studios', 'Rooted Africa', 'Tyrian Group', 'Chop Chop', 'Orah Energies', 'XSITE Capital'],

@@ -135,6 +135,7 @@
   const clock = $('#clock');
   const tick = () => { clock.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: S.timezone }).format(new Date()); };
   tick(); setInterval(tick, 1000);
+  $('#menuSocials').innerHTML = S.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.label} ↗</a>`).join(' &nbsp; ');
   $('#menuEmail').textContent = S.email; $('#menuEmail').href = 'mailto:' + S.email; $('#menuPhone').textContent = S.phone;
 
   /* =========================================================
@@ -349,7 +350,8 @@
       <div class="footer__grid mono">
         <div><span class="h">Navigate</span><a href="#/">Home</a><a href="#/work">Work</a><a href="#/about">About</a><a href="#/contact">Contact</a></div>
         <div><span class="h">Work</span>${C.map(c => `<a href="#/work?c=${c.id}">${c.label}</a>`).join('')}</div>
-        <div><span class="h">Contact</span><a href="mailto:${S.email}">${S.email}</a><a href="tel:${S.phone.replace(/\s/g, '')}">${S.phone}</a>${S.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`).join('')}</div>
+        <div><span class="h">Contact</span><a href="mailto:${S.email}">${S.email}</a><a href="tel:${S.phone.replace(/\s/g, '')}">${S.phone}</a></div>
+        <div><span class="h">Follow</span>${S.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.label} ${s.handle}</a>`).join('')}</div>
         <div><span class="h">Based in</span><span>${S.location}</span><span>Working worldwide</span><span>©${new Date().getFullYear()} ${S.name}</span></div>
       </div>
       <div class="footer__name" data-footer-name aria-hidden="true">Jerry Onwuka</div>
@@ -811,6 +813,7 @@
         <div data-reveal="fade"><span class="mono">Email</span><a href="mailto:${S.email}?subject=Project%20enquiry" data-cursor="link">${S.email}</a></div>
         <div data-reveal="fade"><span class="mono">Phone / WhatsApp</span><a href="tel:${S.phone.replace(/\s/g, '')}" data-cursor="link">${S.phone}</a></div>
         <div data-reveal="fade"><span class="mono">CV</span><a href="${S.cv}" target="_blank" rel="noopener" data-cursor="link">Download PDF ↓</a></div>
+        ${S.socials.map(s => `<div data-reveal="fade"><span class="mono">${s.label}</span><a href="${s.url}" target="_blank" rel="noopener" data-cursor="link">${s.handle} ↗</a></div>`).join('')}
       </div>
     </section>
     ${marquee(['Software Systems', '<span class="serif">Websites</span>', 'Branding', '<span class="serif">Motion</span>', 'UI/UX'], 'marquee--accent')}
