@@ -552,7 +552,7 @@
     <section class="section" style="padding-top:0">
       <div class="label-row mono"><span><span class="num">(07)</span> Process</span><span>Idea → profit</span></div>
       <div class="process">
-        ${S.process.map(s => `<article class="pcard"><div class="pcard__n">${s.n}</div><div class="pcard__r"><h3>${s.title}</h3><p>${s.text}</p></div></article>`).join('')}
+        ${S.process.map(s => `<article class="pcard"><div class="pcard__n">${s.n}</div><div class="pcard__r"><h3>${s.title}</h3><p>${s.text}</p></div><i class="pcard__shade" aria-hidden="true"></i></article>`).join('')}
       </div>
     </section>
 
@@ -880,7 +880,8 @@
         pcs.forEach((c, i) => {
           if (!i) return;
           tl.to(c, { yPercent: 0, ease: 'power2.inOut', duration: 1 }, i - 1)
-            .to(pcs.slice(0, i), { scale: k => 1 - (i - k) * .05, y: k => -(i - k) * 18, filter: 'brightness(.55)', ease: 'power2.inOut', duration: 1 }, i - 1);
+            .to(pcs.slice(0, i), { scale: k => 1 - (i - k) * .05, y: k => -(i - k) * 18, ease: 'power2.inOut', duration: 1 }, i - 1)
+            .to(pcs.slice(0, i).map(p => $('.pcard__shade', p)), { opacity: .5, ease: 'power2.inOut', duration: 1 }, i - 1);
         });
         pcs.forEach(c => { const n = $('.pcard__n', c); ScrollTrigger.create({ trigger: proc, start: 'top 80%', once: true, onEnter: () => scramble(n, 1) }); });
       }
