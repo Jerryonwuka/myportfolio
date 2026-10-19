@@ -71,7 +71,7 @@ window.SITE = {
   ],
   skills: [
     ['UI/UX Design', 'Advanced'], ['Web Design & Development', 'Advanced'], ['Branding', 'Advanced'], ['Motion Graphics', 'Advanced'],
-    ['Visual Communication', 'Advanced'], ['Videography & Editing', 'Advanced'], ['Photography', 'Advanced'], ['Coding & App Development', 'Intermediate']
+    ['Visual Communication', 'Advanced'], ['Videography & Editing', 'Advanced'], ['Photography', 'Advanced'], ['Coding & App Development', 'Advanced']
   ],
   education: { school: 'National Open University of Nigeria', course: 'BSc Business Administration', time: '2024 to 2027' },
   certificates: [

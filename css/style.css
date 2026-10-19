@@ -687,3 +687,40 @@ body.hdr-hidden .filters { top: 0; }
 .reel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 50%, rgba(0,0,0,.65)); pointer-events: none; }
 .reel .badge { z-index: 3; }
 @media (max-width: 860px) { .reels { grid-template-columns: 1fr; } .reel--big { aspect-ratio: 16/9; grid-row: auto; } }
+
+/* ---------- About: founder + hobbies ---------- */
+.founder__grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
+.founder__grid .lead { max-width: 34ch; margin: 24px 0 16px; color: var(--fg); }
+.founder__more { max-width: 46ch; margin: 0 0 32px; font-size: clamp(16px, 1.3vw, 19px); }
+.founder__media { position: relative; display: block; aspect-ratio: 16/10; border-radius: var(--radius); overflow: visible; }
+.founder__media img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: var(--radius); }
+.founder__badge { position: absolute; width: clamp(110px, 11vw, 150px); left: -36px; top: -44px; }
+.founder__badge-bg { fill: var(--accent); }
+.founder__badge text { fill: var(--accent-ink); font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; }
+.founder__badge .founder__badge-star { font-size: 28px; }
+@media (max-width: 860px) { .founder__grid { grid-template-columns: 1fr; } .founder__badge { left: -6px; top: -36px; } }
+
+.hobbies__title { margin-bottom: clamp(32px, 5vw, 64px); }
+.hobbies { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 1.4vw, 20px); }
+.hobby { border: 1px solid var(--line); border-radius: 18px; padding: clamp(18px, 2vw, 26px); background: var(--bg-2); display: grid; align-content: start; gap: 10px; transition: background .5s var(--ease-out), color .5s, border-color .5s, transform .6s var(--ease-out); }
+.hobby:hover { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); transform: translateY(-6px) rotate(-1deg); }
+.hobby:hover .mono, .hobby:hover p, .hobby:hover .lime { color: var(--accent-ink) !important; }
+.hobby__art { height: 150px; display: grid; place-items: center; position: relative; margin-bottom: 8px; color: var(--accent-t); }
+.hobby:hover .hobby__art { color: var(--accent-ink); }
+.hobby__art svg { width: 84px; overflow: visible; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.hobby__art .hobby__pad { width: 110px; }
+.hobby__art .hobby__staff { width: 120px; }
+.hobby__staff .lines { opacity: .35; }
+.hobby__staff ellipse { fill: currentColor; }
+.hobby__shadow { position: absolute; bottom: 14px; left: 50%; width: 60px; height: 8px; margin-left: -30px; border-radius: 50%; background: currentColor; opacity: .6; filter: blur(3px); }
+.hobby__art--player { align-content: center; justify-items: start; gap: 8px; padding: 14px; border-radius: 12px; border: 1px solid currentColor; width: 100%; height: 150px; }
+.hobby__art--player b { font-size: 18px; font-weight: 700; font-stretch: 85%; text-transform: uppercase; color: var(--fg); }
+.hobby:hover .hobby__art--player b { color: var(--accent-ink); }
+.eq { display: flex; align-items: flex-end; gap: 4px; height: 36px; width: 100%; }
+.eq i { flex: 1; height: 100%; background: currentColor; border-radius: 2px; transform-origin: bottom; transform: scaleY(.4); }
+.hobby__track { display: block; width: 100%; height: 3px; background: var(--line-2); border-radius: 3px; overflow: hidden; }
+.hobby__track i { display: block; height: 100%; background: currentColor; transform-origin: left; }
+.hobby h3 { margin: 0; font-weight: 800; font-stretch: 72%; text-transform: uppercase; font-size: clamp(26px, 2.4vw, 38px); line-height: .95; }
+.hobby p { margin: 0; color: var(--fg-dim); font-size: 15px; line-height: 1.45; }
+@media (max-width: 1000px) { .hobbies { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .hobbies { grid-template-columns: 1fr; } }

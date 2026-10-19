@@ -710,13 +710,13 @@
     </section>
     <section class="about-intro">
       <div>
-        <p data-reveal="words">I'm a product designer and systems builder working at the point where <em class="serif lime">business</em> meets <em class="serif lime">innovation.</em></p>
-        <p data-reveal="words">For over seven years I've collaborated with more than 100 brands, from early-stage founders to established companies, turning ideas into things that work and make money.</p>
-        <p class="small" data-reveal="fade">My work starts with the business: who pays, why, and what is in the way. Then I design and build the whole system around it. That means the brand identity, the website that sells it, the dashboards and apps that run it, and the motion and stories that launch it. I've shipped transport operating systems, land-leasing marketplaces, AI-powered SaaS and team-management platforms, built identities for agriculture, energy, food and advisory brands, and won a creative competition with a 3D brand film.</p>
-        <p class="small" data-reveal="fade">Today I'm the Brand Designer at XSITE Capital Investment, and I build my own products: Boredroom, Farmerz and BrandPilot. I'm a Google-certified UX designer, studying Business Administration at the National Open University of Nigeria, based in ${S.location} and working with teams everywhere.</p>
+        <p data-reveal="words">Hey, I'm Jerry. I turn <em class="serif lime">ideas</em> into things that actually make <em class="serif lime">money.</em></p>
+        <p data-reveal="words">I've been an entrepreneur at heart since I was a kid. Always selling something, starting something, or taking things apart to see how they could work better. That never went away. It just got bigger tools.</p>
+        <p class="small" data-reveal="fade">These days I sit right where business meets innovation. For 7+ years I've worked with 100+ brands, from first-time founders to established companies, and my process is simple: find where the money is, then design and build everything around it. The brand, the website that sells it, the software that runs it, and the story that launches it.</p>
+        <p class="small" data-reveal="fade">Right now I'm the Brand Designer at XSITE Capital Investment and a Google-certified UX designer, based in ${S.location} and working with teams anywhere.</p>
         <div class="footer__actions" style="justify-content:flex-start" data-reveal="fade">
           <a class="btn btn--accent btn--lg" href="${S.cv}" target="_blank" rel="noopener" data-magnetic><span>Download CV</span><i>↓</i></a>
-          <a class="btn btn--ghost btn--lg" href="#/contact" data-magnetic><span>Get in touch</span><i>↗</i></a>
+          <a class="btn btn--ghost btn--lg" href="#/contact" data-magnetic><span>Say hi</span><i>↗</i></a>
         </div>
       </div>
       <aside class="about-card" data-reveal="clip">
@@ -729,18 +729,75 @@
       </aside>
     </section>
 
-    ${experienceSection('01')}
+    <section class="section founder">
+      <div class="label-row mono"><span><span class="num">(01)</span> Founder mode</span><span>Boredroom</span></div>
+      <div class="founder__grid">
+        <div>
+          <h2 class="display h2">Living the <span class="serif lime">dream</span></h2>
+          <p class="lead">I'm the founder of Boredroom, remote team software where everyone gets their own AI assistant. Building it is literally the thing I used to daydream about as a kid: an idea, a team, a real product people pay for.</p>
+          <p class="dim founder__more">And honestly? This is just the start. There are a whole lot more products and systems I want to build, and I'm building them.</p>
+          <a class="btn btn--accent btn--lg" href="#/work/boredroom" data-magnetic><span>See how I built Boredroom</span><i>→</i></a>
+        </div>
+        <a class="founder__media" href="#/work/boredroom" data-cursor="view" data-label="OPEN" data-reveal="clip">
+          <img src="${thumb(bySlug('boredroom'))}" alt="Boredroom website" loading="lazy">
+          <svg class="founder__badge" viewBox="0 0 120 120" aria-hidden="true" data-spin>
+            <defs><path id="fb-circle" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+            <circle cx="60" cy="60" r="58" class="founder__badge-bg"/>
+            <text><textPath href="#fb-circle">FOUNDER • BOREDROOM • FOUNDER • BOREDROOM •</textPath></text>
+            <text x="60" y="68" text-anchor="middle" class="founder__badge-star">★</text>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="label-row mono"><span><span class="num">(02)</span> Off the clock</span><span>Hover the cards</span></div>
+      <h2 class="display h2 hobbies__title">When I'm not <span class="serif lime">building</span></h2>
+      <div class="hobbies">
+        <article class="hobby" data-hobby="ball">
+          <div class="hobby__art"><svg viewBox="0 0 80 80" class="hobby__ball"><circle cx="40" cy="40" r="30"/><path d="M10 40h60M40 10v60M19 19c10 10 10 32 0 42M61 19c-10 10-10 32 0 42"/></svg><i class="hobby__shadow"></i></div>
+          <span class="mono">(01) Basketball</span>
+          <h3>Ball is life</h3>
+          <p>Best ideas show up between buckets. If I'm not at my desk, check the court.</p>
+        </article>
+        <article class="hobby" data-hobby="game">
+          <div class="hobby__art"><svg viewBox="0 0 96 64" class="hobby__pad"><path d="M24 12h48c12 0 20 10 22 24s-4 22-12 22c-6 0-10-6-14-10H28c-4 4-8 10-14 10C6 58 0 50 2 36S12 12 24 12Z"/><path d="M22 28v14M15 35h14"/><circle class="b1" cx="68" cy="30" r="3.5"/><circle class="b2" cx="77" cy="38" r="3.5"/></svg></div>
+          <span class="mono">(02) Gaming</span>
+          <h3>Player one</h3>
+          <p>I love gaming. So much. It's how my brain cools down after a heavy build, and I come back sharper.</p>
+        </article>
+        <article class="hobby" data-hobby="classical">
+          <div class="hobby__art"><svg viewBox="0 0 80 80" class="hobby__staff"><path d="M6 26h68M6 34h68M6 42h68M6 50h68M6 58h68" class="lines"/><g class="note"><ellipse cx="28" cy="54" rx="6" ry="4.5"/><path d="M34 54V22"/></g><g class="note"><ellipse cx="50" cy="46" rx="6" ry="4.5"/><path d="M56 46V14q6 4 8 10"/></g></svg></div>
+          <span class="mono">(03) Classical</span>
+          <h3>Bach on, world off</h3>
+          <p>Classical music is my deep-focus mode. One symphony in and I'm locked in for hours.</p>
+        </article>
+        <article class="hobby" data-hobby="jazz">
+          <div class="hobby__art hobby__art--player">
+            <span class="mono">Now playing</span>
+            <b>Late-night lock-in</b>
+            <span class="eq">${'<i></i>'.repeat(9)}</span>
+            <span class="hobby__track"><i></i></span>
+          </div>
+          <span class="mono">(04) Jazz</span>
+          <h3>Saxophone focus</h3>
+          <p>Jazz is how I lock in. Late build, headphones on, sax going. That's the zone.</p>
+        </article>
+      </div>
+    </section>
+
+    ${experienceSection('03')}
 
     <section class="section" style="padding-top:0">
-      <div class="label-row mono"><span><span class="num">(02)</span> Skills</span><span>Self-assessed</span></div>
+      <div class="label-row mono"><span><span class="num">(04)</span> Skills</span><span>Self-assessed</span></div>
       <div class="skills">${S.skills.map(([k, v]) => `<div class="skill" data-reveal="fade"><div class="skill__row"><b>${k}</b><span class="mono dim">${v}</span></div><div class="skill__bar"><i data-skill="${v === 'Advanced' ? .92 : .65}"></i></div></div>`).join('')}</div>
     </section>
 
-    ${toolkitSection('03')}
+    ${toolkitSection('05')}
 
     ${marquee(S.services.map(s => s.title), 'marquee--accent')}
 
-    ${certsSection('04', true)}
+    ${certsSection('06')}
     ${footer()}`;
 
   const Contact = () => `
@@ -968,6 +1025,39 @@
         const stop = () => { v.pause(); r.classList.remove('on'); };
         if (fine) { r.addEventListener('mouseenter', play); r.addEventListener('mouseleave', stop); }
         else ScrollTrigger.create({ trigger: r, start: 'top 70%', end: 'bottom 30%', onToggle: s => s.isActive ? play() : stop() });
+      });
+
+      /* about: founder badge + hobby cards */
+      $$('[data-spin]', app).forEach(b => gsap.to(b, { rotation: 360, duration: 14, repeat: -1, ease: 'none', transformOrigin: '50% 50%' }));
+      $$('[data-hobby]', app).forEach(card => {
+        const kind = card.dataset.hobby; let tl;
+        if (kind === 'ball') {
+          const ball = $('.hobby__ball', card), sh = $('.hobby__shadow', card);
+          tl = gsap.timeline({ repeat: -1 })
+            .to(ball, { y: -46, rotation: 180, duration: .45, ease: 'power2.out' })
+            .to(sh, { scale: .5, opacity: .25, duration: .45, ease: 'power2.out' }, 0)
+            .to(ball, { y: 0, rotation: 360, duration: .45, ease: 'power2.in' })
+            .to(sh, { scale: 1, opacity: .6, duration: .45, ease: 'power2.in' }, '<')
+            .to(ball, { scaleY: .86, scaleX: 1.1, duration: .08, yoyo: true, repeat: 1, transformOrigin: '50% 100%' });
+        } else if (kind === 'game') {
+          const pad = $('.hobby__pad', card);
+          tl = gsap.timeline({ repeat: -1, repeatDelay: .4 })
+            .to(pad, { rotation: -8, duration: .12 }).to(pad, { rotation: 8, duration: .12 }).to(pad, { rotation: -5, duration: .1 }).to(pad, { rotation: 0, duration: .1 })
+            .to($('.b1', card), { fill: 'currentColor', duration: .1, yoyo: true, repeat: 3 }, 0)
+            .to($('.b2', card), { fill: 'currentColor', duration: .1, yoyo: true, repeat: 3 }, .2);
+        } else if (kind === 'classical') {
+          tl = gsap.timeline({ repeat: -1 }).to($$('.note', card), { y: -8, rotation: -6, duration: .6, ease: 'sine.inOut', stagger: .3, yoyo: true, repeat: 1 });
+        } else if (kind === 'jazz') {
+          const bars = $$('.eq i', card);
+          tl = gsap.timeline({ repeat: -1 });
+          bars.forEach((b, i) => tl.to(b, { scaleY: () => gsap.utils.random(.2, 1), duration: .25, repeat: 3, yoyo: true, repeatRefresh: true, ease: 'sine.inOut' }, i * .05));
+          gsap.fromTo($('.hobby__track i', card), { scaleX: 0 }, { scaleX: 1, duration: 30, ease: 'none', repeat: -1 });
+        }
+        if (!tl) return;
+        tl.timeScale(.6);
+        card.addEventListener('mouseenter', () => gsap.to(tl, { timeScale: 1.6, duration: .4 }));
+        card.addEventListener('mouseleave', () => gsap.to(tl, { timeScale: .6, duration: .6 }));
+        gsap.from(card, { y: 80, rotation: gsap.utils.random(-6, 6), opacity: 0, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: card, start: 'top 92%' } });
       });
 
       /* toolkit chips + app tiles */
