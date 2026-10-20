@@ -760,7 +760,7 @@
   const fmtDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
   const Article = slug => {
     const x = art(slug); if (!x) return NotFound();
-    const sibs = AR.filter(y => y !== x).slice(0, 2), parent = svc(x.parent);
+    const sibs = (x.related ? x.related.map(art).filter(Boolean) : AR.filter(y => y !== x)).slice(0, 2), parent = svc(x.parent);
     return `
     <article class="article">
       <header class="article__head">

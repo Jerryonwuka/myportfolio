@@ -4,7 +4,7 @@ Static site with a pre-render build, so every page ships as real HTML for search
 
 ## Run locally
 
-    node scripts/build.mjs     # writes dist/ (37 pages, 404, sitemap.xml, robots.txt)
+    node scripts/build.mjs     # writes dist/ (42 pages, 404, sitemap.xml, robots.txt)
     node scripts/serve.mjs     # serves dist/ on http://localhost:8765
 
 ## Deploy

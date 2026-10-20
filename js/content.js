@@ -79,7 +79,7 @@ window.CONTENT = {
       intro: 'My web design services cover the whole job, from the first sitemap to a live, fast site you own. I design and build in one run, so there is no handover gap between a designer\'s mockup and a developer\'s interpretation of it. The result is a site that looks like your brand, loads quickly, can be found on search and is built to turn visits into enquiries.',
       work: ['aziki', 'fabro', 'boredroom-website'],
       workAnchor: 'website build',
-      article: 'design-system-examples',
+      article: 'design-and-build-one-team',
       siblings: ['brand-identity-design', 'landing-page-design'],
       sections: [
         { h2: 'What web design services include here', html: `
@@ -134,7 +134,7 @@ window.CONTENT = {
       intro: 'Good landing page design starts with one question: what is the single action this page exists for? A waitlist sign-up, a demo request, a pre-order, a consultation. I design and build landing pages around that action, writing the message first, arranging proof before the ask and keeping the form as short as the decision allows, so the page loads fast and reads clearly on any device.',
       work: ['brandpilot-website', 'damov-website', 'motionbox'],
       workAnchor: 'landing page',
-      article: 'landing-page-design-examples',
+      article: 'landing-page-sections',
       siblings: ['web-design-services', 'brand-identity-design'],
       sections: [
         { h2: 'What a landing page has to do', html: `
