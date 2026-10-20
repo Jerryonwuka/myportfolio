@@ -12,7 +12,7 @@ window.SITE = {
   phone: '+234 810 643 1919',
   location: 'Abuja, Nigeria',
   timezone: 'Africa/Lagos',
-  cv: '/assets/Jerry-Onwuka-CV.pdf',
+  cv: '/assets/Jeremiah-Onwuka-CV.pdf',
   socials: [
     { label: 'X', handle: '@JeremiahDfirst', url: 'https://x.com/JeremiahDfirst' },
     { label: 'Instagram', handle: '@jeremiahdfirst', url: 'https://www.instagram.com/jeremiahdfirst/' }
