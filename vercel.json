@@ -6,15 +6,85 @@
   "outputDirectory": "dist",
   "trailingSlash": true,
   "redirects": [
-    { "source": "/services", "destination": "/", "permanent": true },
-    { "source": "/services/brand-identity", "destination": "/services/brand-identity-design/", "permanent": true },
-    { "source": "/services/web-design", "destination": "/services/web-design-services/", "permanent": true },
-    { "source": "/services/landing-pages", "destination": "/services/landing-page-design/", "permanent": true },
-    { "source": "/articles", "destination": "/insights/", "permanent": true },
-    { "source": "/articles/:slug", "destination": "/insights/:slug/", "permanent": true }
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/brand-identity",
+      "destination": "/services/brand-identity-design/",
+      "permanent": true
+    },
+    {
+      "source": "/services/brand-identity/",
+      "destination": "/services/brand-identity-design/",
+      "permanent": true
+    },
+    {
+      "source": "/services/web-design",
+      "destination": "/services/web-design-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/web-design/",
+      "destination": "/services/web-design-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/landing-pages",
+      "destination": "/services/landing-page-design/",
+      "permanent": true
+    },
+    {
+      "source": "/services/landing-pages/",
+      "destination": "/services/landing-page-design/",
+      "permanent": true
+    },
+    {
+      "source": "/articles",
+      "destination": "/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/",
+      "destination": "/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/:slug",
+      "destination": "/insights/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/:slug/",
+      "destination": "/insights/:slug/",
+      "permanent": true
+    }
   ],
   "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] },
-    { "source": "/og/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] }
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    },
+    {
+      "source": "/og/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
   ]
 }
