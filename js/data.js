@@ -12,12 +12,12 @@ window.SITE = {
   phone: '+234 810 643 1919',
   location: 'Abuja, Nigeria',
   timezone: 'Africa/Lagos',
-  cv: 'assets/Jerry-Onwuka-CV.pdf',
+  cv: '/assets/Jerry-Onwuka-CV.pdf',
   socials: [
     { label: 'X', handle: '@JeremiahDfirst', url: 'https://x.com/JeremiahDfirst' },
     { label: 'Instagram', handle: '@jeremiahdfirst', url: 'https://www.instagram.com/jeremiahdfirst/' }
   ],
-  photos: { hero: 'assets/img/me/portrait.webp', stage: 'assets/img/me/thinking.webp', about: 'assets/img/me/smile.webp', casual: 'assets/img/me/casual.webp' },
+  photos: { hero: '/assets/img/me/portrait.webp', stage: '/assets/img/me/thinking.webp', about: '/assets/img/me/smile.webp', casual: '/assets/img/me/casual.webp' },
   brands: ['Boredroom', 'Damov', 'Farmerz', 'BrandPilot', 'GoDark', 'Aziki Medical', 'Fabro', 'Motionbox Studios', 'Rooted Africa', 'Tyrian Group', 'Chop Chop', 'Orah Energies', 'XSITE Capital'],
   stats: [
     { value: 7, suffix: '+', label: 'Years building brands, products and systems' },
@@ -76,11 +76,11 @@ window.SITE = {
   ],
   education: { school: 'National Open University of Nigeria', course: 'BSc Business Administration', time: '2024 to 2027' },
   certificates: [
-    { title: 'Foundations of User Experience (UX) Design', issuer: 'Google · Coursera', year: '', img: 'assets/img/certs/google-ux.webp' },
-    { title: 'Google Ads Video Certification', issuer: 'Google', year: '2026', img: 'assets/img/certs/google-ads-video.webp' },
-    { title: 'Leadership: Scaling Your Influence in the 21st Century', issuer: 'Hardé Business School', year: '2026', img: 'assets/img/certs/leadership.webp' },
-    { title: 'Introduction to Design Systems', issuer: 'Figma', year: '', img: 'assets/img/certs/design-systems.webp' },
-    { title: 'No-Code Web Design with Elementor & WordPress', issuer: 'Domestika', year: '2024', img: 'assets/img/certs/domestika.webp' }
+    { title: 'Foundations of User Experience (UX) Design', issuer: 'Google · Coursera', year: '', img: '/assets/img/certs/google-ux.webp' },
+    { title: 'Google Ads Video Certification', issuer: 'Google', year: '2026', img: '/assets/img/certs/google-ads-video.webp' },
+    { title: 'Leadership: Scaling Your Influence in the 21st Century', issuer: 'Hardé Business School', year: '2026', img: '/assets/img/certs/leadership.webp' },
+    { title: 'Introduction to Design Systems', issuer: 'Figma', year: '', img: '/assets/img/certs/design-systems.webp' },
+    { title: 'No-Code Web Design with Elementor & WordPress', issuer: 'Domestika', year: '2024', img: '/assets/img/certs/domestika.webp' }
   ],
   /* Pricing page. All prices in USD and editable here. */
   packages: [
@@ -146,7 +146,7 @@ window.CATEGORIES = [
 window.PROJECTS = [
   /* ---------------- PERSONAL PROJECTS (my own products) ---------------- */
   {
-    slug: 'boredroom', cat: 'personal', images: 'boredroom-system', thumb: 'assets/img/boredroom-website/01.webp', lead: true,
+    slug: 'boredroom', cat: 'personal', images: 'boredroom-system', thumb: '/assets/img/boredroom-website/01.webp', lead: true,
     title: 'Boredroom', sub: 'Remote teams, without the chasing',
     year: '2026', client: 'Personal project', industry: 'SaaS · Future of work', accent: '#F27A1A',
     role: 'Co-founder · strategy, design & build', url: 'https://www.boredroom.cc/',
@@ -394,7 +394,7 @@ window.PROJECTS = [
 
   /* ---------------- BRANDING ---------------- */
   {
-    slug: 'chopchop', cat: 'branding', thumb: 'assets/img/thumbs/chopchop.webp', images: 'chopchop',
+    slug: 'chopchop', cat: 'branding', thumb: '/assets/img/thumbs/chopchop.webp', images: 'chopchop',
     title: 'Chop Chop', sub: 'Hungry? Chop Chop.',
     year: '2026', client: 'Chop Chop', industry: 'Quick-service restaurant', accent: '#E8311E',
     role: 'Brand identity & packaging', services: ['Naming voice', 'Logo', 'Packaging', 'Signage', 'Uniform', 'Campaign'],
@@ -409,7 +409,7 @@ window.PROJECTS = [
     highlights: ['Wordmark', 'Packaging system', 'Store signage', 'Campaign']
   },
   {
-    slug: 'rooted-africa', cat: 'branding', thumb: 'assets/img/thumbs/rooted-africa.webp', images: 'rooted-africa',
+    slug: 'rooted-africa', cat: 'branding', thumb: '/assets/img/thumbs/rooted-africa.webp', images: 'rooted-africa',
     title: 'Rooted Africa', sub: 'People. Land. Opportunity.',
     year: '2026', client: 'Rooted Africa', industry: 'Agriculture · Food', accent: '#C8A23A',
     role: 'Brand identity & world-building', services: ['Strategy', 'Logo system', 'Packaging', 'Fleet & signage', 'Merch', 'Editorial'],
@@ -424,7 +424,7 @@ window.PROJECTS = [
     highlights: ['Logo system', 'Packaging', 'Fleet & signage', 'Editorial']
   },
   {
-    slug: 'tyrian', cat: 'branding', thumb: 'assets/img/thumbs/tyrian.webp', images: 'tyrian',
+    slug: 'tyrian', cat: 'branding', thumb: '/assets/img/thumbs/tyrian.webp', images: 'tyrian',
     title: 'Tyrian Group', sub: 'Clarity. Direction. Progress.',
     year: '2026', client: 'Tyrian Group', industry: 'Advisory · Strategy', accent: '#8E1F5C',
     role: 'Brand identity', services: ['Positioning', 'Logo & crest', 'Stationery', 'Environment', 'Campaign'],
@@ -439,7 +439,7 @@ window.PROJECTS = [
     highlights: ['Crest & wordmark', 'Luxury stationery', 'Environment', 'OOH campaign']
   },
   {
-    slug: 'brandpilot-brand', cat: 'branding', thumb: 'assets/img/thumbs/brandpilot-brand.webp', images: 'brandpilot-brand',
+    slug: 'brandpilot-brand', cat: 'branding', thumb: '/assets/img/thumbs/brandpilot-brand.webp', images: 'brandpilot-brand',
     title: 'BrandPilot', sub: 'From idea to live',
     year: '2026', client: 'BrandPilot', industry: 'AI SaaS', accent: '#8B5CF6',
     role: 'Brand identity & campaign', services: ['Identity', 'Glass wordmark', 'Merch', 'OOH campaign', 'Product shots'],
@@ -454,7 +454,7 @@ window.PROJECTS = [
     highlights: ['B monogram', 'Material language', 'Merch', 'Street campaign']
   },
   {
-    slug: 'farmerz-brand', cat: 'branding', thumb: 'assets/img/thumbs/farmerz-brand.webp', images: 'farmerz-brand',
+    slug: 'farmerz-brand', cat: 'branding', thumb: '/assets/img/thumbs/farmerz-brand.webp', images: 'farmerz-brand',
     title: 'Farmerz', sub: 'Make room for growth',
     year: '2026', client: 'Farmerz', industry: 'Agritech', accent: '#F26B1D',
     role: 'Brand identity & campaign', services: ['Identity', 'Campaign line', 'Field kit', 'OOH', 'Merch'],
@@ -469,7 +469,7 @@ window.PROJECTS = [
     highlights: ['Identity', 'Campaign line', 'Field kit', 'Billboards']
   },
   {
-    slug: 'orah', cat: 'branding', thumb: 'assets/img/thumbs/orah.webp', images: 'orah',
+    slug: 'orah', cat: 'branding', thumb: '/assets/img/thumbs/orah.webp', images: 'orah',
     title: 'Orah Energies', sub: 'Orah makes sunlight work',
     year: '2026', client: 'Orah Energies', industry: 'Solar energy', accent: '#39E27A',
     role: 'Brand identity', services: ['Identity', 'Signage', 'Fleet', 'Workwear', 'Product'],
@@ -486,7 +486,7 @@ window.PROJECTS = [
 
   /* ---------------- MOTION & STORYTELLING ---------------- */
   {
-    slug: 'godark', cat: 'motion', images: 'godark', video: 'assets/video/godark.mp4',
+    slug: 'godark', cat: 'motion', images: 'godark', video: '/assets/video/godark.mp4',
     title: 'GoDark', sub: 'Winning entry · 3D brand film',
     year: '2026', client: 'GoDark', industry: 'Crypto trading', accent: '#B06BFF', award: 'Competition winner',
     role: '3D motion & storytelling', services: ['Concept', 'Storyboard', '3D motion', 'Edit', 'Sound design'],
@@ -501,7 +501,7 @@ window.PROJECTS = [
     highlights: ['Competition winner', '3D motion', 'Brand film', '1:52 runtime']
   },
   {
-    slug: 'boredroom-story', cat: 'motion', images: 'boredroom-story', video: 'assets/video/boredroom-launch-v2.mp4',
+    slug: 'boredroom-story', cat: 'motion', images: 'boredroom-story', video: '/assets/video/boredroom-launch-v2.mp4',
     title: 'A Boredroom Original', sub: 'Illustrated brand story · 2D animation',
     year: '2026', client: 'Boredroom (personal project)', industry: 'SaaS · Brand storytelling', accent: '#F27A1A',
     role: 'Story, art direction & animation', services: ['Concept', 'Script', 'Art direction', 'Illustration', '2D animation', 'Edit'],
@@ -517,7 +517,7 @@ window.PROJECTS = [
     highlights: ['Illustrated story', '2D animation', 'Comic-panel editing', '1:33 runtime']
   },
   {
-    slug: 'boredroom-film', cat: 'motion', images: 'boredroom-film', video: 'assets/video/boredroom-launch.mp4',
+    slug: 'boredroom-film', cat: 'motion', images: 'boredroom-film', video: '/assets/video/boredroom-launch.mp4',
     title: 'Boredroom Launch', sub: '2D animation · Launch film',
     year: '2026', client: 'Boredroom', industry: 'SaaS', accent: '#F27A1A',
     role: 'Story, 2D animation & edit', services: ['Script', 'Storyboard', '2D animation', 'UI animation', 'Edit'],
