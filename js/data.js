@@ -161,7 +161,7 @@ window.PROJECTS = [
     ],
     outcome: 'From a frustration to a launched, revenue-ready SaaS: brand, website, product, admin and launch film, all designed and built by me as co-founder.',
     highlights: ['Co-founder built', 'AI assistant per person', 'Subscriptions & payments', 'Launch film'],
-    parts: [['Software system', 'boredroom-system'], ['Website', 'boredroom-website'], ['Brand story film', 'boredroom-story'], ['Launch film', 'boredroom-film']]
+    parts: [['Software system', 'boredroom-system'], ['Website', 'boredroom-website'], ['Product explainer', 'boredroom-explainer'], ['Brand story film', 'boredroom-story'], ['Launch film', 'boredroom-film']]
   },
   {
     slug: 'farmerz', cat: 'personal', images: 'farmerz-system',
@@ -515,6 +515,22 @@ window.PROJECTS = [
     ],
     outcome: 'A 1:33 illustrated story that gives a software product a personality and a world people want to be part of.',
     highlights: ['Illustrated story', '2D animation', 'Comic-panel editing', '1:33 runtime']
+  },
+  {
+    slug: 'boredroom-explainer', cat: 'motion', kind: 'Product Explainer', images: 'boredroom-explainer', video: '/assets/video/boredroom-explainer.mp4',
+    title: 'Meet Brenda', sub: 'Boredroom product explainer · 2D motion',
+    year: '2026', client: 'Boredroom (personal project)', industry: 'SaaS · Product marketing', accent: '#F27A1A',
+    role: 'Script, motion design & edit', services: ['Script', 'Character animation', 'UI motion', 'Kinetic type', 'Edit'],
+    about: 'Boredroom is remote team software that gives every person an AI assistant called Brenda. This explainer lets Brenda introduce the product herself, in her own voice.',
+    challenge: 'Remote leads already have time trackers that show who is online. The film had to explain, in about a minute and a half, why being online is not the same as being productive, and why an assistant that knows the work is different.',
+    approach: [
+      ['Brenda tells it', 'The fluffy assistant character narrates in the first person: "I know Michael has three things to finish today" and "I know there are two things waiting for you to review."'],
+      ['The real product on screen', 'Tasks, the review queue, the dashboard, the docs and the people list animate in behind her, so every claim is shown in the actual interface.'],
+      ['The problem, made visible', 'A running timer and an "Online ≠ Productive?" moment show what clocks cannot tell a lead, then a wall of "Any update?" messages shows the endless check-ins.'],
+      ['The payoff', 'The whole family of assistants lines up for the title, "Your organisational work assistant", landing on "Less chasing." and a clear call to action.']
+    ],
+    outcome: 'A 1:34 explainer that turns a new kind of team software into a story people understand in one watch, led by a character people remember.',
+    highlights: ['Character-led', 'Real UI motion', 'Kinetic type', '1:34 runtime']
   },
   {
     slug: 'boredroom-film', cat: 'motion', images: 'boredroom-film', video: '/assets/video/boredroom-launch.mp4',

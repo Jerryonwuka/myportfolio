@@ -19,7 +19,7 @@
   /* which service page a project belongs to */
   const LANDING = ['brandpilot-website', 'damov-website', 'motionbox'];
   const serviceOf = p => p.cat === 'branding' ? 'brand-identity-design' : LANDING.includes(p.slug) ? 'landing-page-design' : p.cat === 'motion' ? null : 'web-design-services';
-  const kindOf = p => ({ personal: 'Product', systems: 'Software System', websites: LANDING.includes(p.slug) ? 'Landing Page' : 'Website', branding: 'Brand Identity', motion: 'Brand Film' }[p.cat]);
+  const kindOf = p => p.kind || ({ personal: 'Product', systems: 'Software System', websites: LANDING.includes(p.slug) ? 'Landing Page' : 'Website', branding: 'Brand Identity', motion: 'Brand Film' }[p.cat]);
   const crumbs = items => `<nav class="crumbs mono" aria-label="Breadcrumb"><ol>${items.map(([n, u], i) => `<li>${i < items.length - 1 ? `<a href="${u}">${n}</a>` : `<span aria-current="page">${n}</span>`}</li>`).join('')}</ol></nav>`;
   const host = u => u ? u.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
 
@@ -228,7 +228,7 @@
         <p class="lead dim">3D brand films, launch animations and stories that explain a product in seconds.</p>
       </div>
       <div class="reels">
-        ${[['godark', 'big', '3D brand film'], ['boredroom-story', '', 'Illustrated story'], ['boredroom-film', '', '2D launch film']].map(([s, big, kind]) => { const p = bySlug(s); return `
+        ${[['godark', 'big', '3D brand film'], ['boredroom-explainer', '', 'Product explainer'], ['boredroom-story', '', 'Illustrated story'], ['boredroom-film', '', '2D launch film']].map(([s, big, kind]) => { const p = bySlug(s); return `
         <a class="reel${big ? ' reel--big' : ''}" href="/work/${s}/" data-reel data-cursor="view" data-label="WATCH" data-reveal="clip">
           <img src="${thumb(p)}" alt="${esc(p.title)} film still" loading="lazy">
           <video src="${p.video}" muted loop playsinline preload="none"></video>
@@ -372,7 +372,7 @@
         <span>${p.industry}</span>
       </div>
       <h1 class="case-title"><span class="display case-title__main" data-reveal="chars">${p.title}</span><span class="sr-only">: </span><span class="case-hero__sub" data-reveal="words">${titleWords.slice(0, -1).join(' ')} <em>${titleWords.slice(-1)}</em></span></h1>
-      <p class="case-hero__line">${/personal/i.test(p.client) ? `${p.title} is one of my own products` : `A ${kindOf(p).toLowerCase()} project for ${p.client}`}, in ${p.industry.toLowerCase().replace(' · ', ' and ').replace(/\bsaas\b/g, 'SaaS').replace(/\bai\b/g, 'AI')}, ${p.year}.${serviceOf(p) ? ` Service: <a href="/services/${serviceOf(p)}/">${svc(serviceOf(p)).name}</a>.` : ''}</p>
+      <p class="case-hero__line">${p.cat === 'personal' ? `${p.title} is one of my own products` : /personal/i.test(p.client) ? `A ${kindOf(p).toLowerCase()} for ${p.client.replace(/\s*\(personal project\)/i, '')}, one of my own products` : `A ${kindOf(p).toLowerCase()} project for ${p.client}`}, in ${p.industry.toLowerCase().replace(' · ', ' and ').replace(/\bsaas\b/g, 'SaaS').replace(/\bai\b/g, 'AI')}, ${p.year}.${serviceOf(p) ? ` Service: <a href="/services/${serviceOf(p)}/">${svc(serviceOf(p)).name}</a>.` : ''}</p>
       <dl class="meta mono">
         <div data-reveal="fade"><dt>Client</dt><dd>${p.client}</dd></div>
         <div data-reveal="fade"><dt>Role</dt><dd>${p.role}</dd></div>
