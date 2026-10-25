@@ -684,7 +684,7 @@ body.hdr-hidden .filters { top: 0; }
 .stat b sup { top: 0; vertical-align: top; }
 
 /* ---------- Motion section ---------- */
-.reels { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); }
+.reels { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px, 2vw, 28px); }
 .reel { position: relative; display: block; border-radius: var(--radius); overflow: hidden; background: #000; aspect-ratio: 16/9; }
 .reel--big { grid-column: 1 / -1; aspect-ratio: 21/9; }
 .reel video, .reel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }

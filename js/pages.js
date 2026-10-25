@@ -228,7 +228,7 @@
         <p class="lead dim">3D brand films, launch animations and stories that explain a product in seconds.</p>
       </div>
       <div class="reels">
-        ${[['godark', 'big', '3D brand film'], ['boredroom-explainer', '', 'Product explainer'], ['boredroom-story', '', 'Illustrated story'], ['boredroom-film', '', '2D launch film']].map(([s, big, kind]) => { const p = bySlug(s); return `
+        ${[['godark', 'big', '3D brand film'], ['boredroom-product-film', '', 'Product film'], ['boredroom-explainer', '', 'Product explainer'], ['boredroom-story', '', 'Illustrated story'], ['boredroom-film', '', '2D launch film']].map(([s, big, kind]) => { const p = bySlug(s); return `
         <a class="reel${big ? ' reel--big' : ''}" href="/work/${s}/" data-reel data-cursor="view" data-label="WATCH" data-reveal="clip">
           <img src="${thumb(p)}" alt="${esc(p.title)} film still" loading="lazy">
           <video src="${p.video}" muted loop playsinline preload="none"></video>

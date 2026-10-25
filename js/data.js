@@ -161,7 +161,7 @@ window.PROJECTS = [
     ],
     outcome: 'From a frustration to a launched, revenue-ready SaaS: brand, website, product, admin and launch film, all designed and built by me as co-founder.',
     highlights: ['Co-founder built', 'AI assistant per person', 'Subscriptions & payments', 'Launch film'],
-    parts: [['Software system', 'boredroom-system'], ['Website', 'boredroom-website'], ['Product explainer', 'boredroom-explainer'], ['Brand story film', 'boredroom-story'], ['Launch film', 'boredroom-film']]
+    parts: [['Software system', 'boredroom-system'], ['Website', 'boredroom-website'], ['Product explainer', 'boredroom-explainer'], ['Product film', 'boredroom-product-film'], ['Brand story film', 'boredroom-story'], ['Launch film', 'boredroom-film']]
   },
   {
     slug: 'farmerz', cat: 'personal', images: 'farmerz-system',
@@ -499,6 +499,22 @@ window.PROJECTS = [
     ],
     outcome: 'We won the competition. The film became the featured winning entry and set the visual tone for GoDark.',
     highlights: ['Competition winner', '3D motion', 'Brand film', '1:52 runtime']
+  },
+  {
+    slug: 'boredroom-product-film', cat: 'motion', kind: 'Product Film', images: 'boredroom-product-film', video: '/assets/video/boredroom-product-film.mp4',
+    title: 'All Synced', sub: 'Boredroom product film · 3D & UI motion',
+    year: '2026', client: 'Boredroom (personal project)', industry: 'SaaS · Product marketing', accent: '#F27A1A',
+    role: 'Script, motion design & edit', services: ['Script', 'Storyboard', '3D device motion', 'UI animation', 'Kinetic type', 'Edit'],
+    about: 'Boredroom is remote team software that gives every person an AI assistant called Brenda. This product film follows one team through a working week, from the first task on Monday to the weekly report on Friday.',
+    challenge: 'Show what Boredroom does across a whole week in under a minute and a half: connect the tools a team already uses, keep everyone\'s progress visible and make the "any status updates?" message unnecessary, without turning into a feature list.',
+    approach: [
+      ['Brenda arrives', 'It opens on the real Boredroom dashboard on a laptop. Tasks, a Notion doc and a merged GitHub pull request float out of the screen, then Brenda introduces herself: "Your organisational work assistant".'],
+      ['Every tool, one place', 'Jira, Linear, Asana, Notion, GitHub and Google Calendar are joined by a single line that runs into "Ask Brenda", landing on the line "All synced. One place."'],
+      ['The day without chasing', 'To-dos tick themselves off, a "Hey team, any status updates?" message is answered before it is sent, and "Tasks. Owners. Progress." shows who is handing in work and who is blocked.'],
+      ['The week, written for you', 'Monday turns into Friday and the weekly report drafts itself: what got done and who did it. The whole family of assistants lines up under the Boredroom wordmark with a clear call to action.']
+    ],
+    outcome: 'A 1:19 product film that shows Boredroom working end to end, in the real interface, across a full working week.',
+    highlights: ['3D device motion', 'Real UI motion', 'Integrations story', '1:19 runtime']
   },
   {
     slug: 'boredroom-story', cat: 'motion', images: 'boredroom-story', video: '/assets/video/boredroom-launch-v2.mp4',
